@@ -19,6 +19,9 @@ class Post
 	def show_text
 		@text
 	end
+	def show_sponsor
+		@sponsor
+	end
 	
 	
 end

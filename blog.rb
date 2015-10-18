@@ -9,12 +9,17 @@ class Blog
 
 	def publish_front_page
 		@array_post.each do |post|
-			puts "Post #{post.show_title}"
-			 (post.show_title.size+ 6).times {print "*"}
+			if(post.show_sponsor == true)
+				puts "Post #{post.show_title}"
+			else
+				puts "************ Post #{post.show_title} *******************"	
+			end
+			 (post.show_title.size + 6).times {print "*"}
 			 puts
 
+
 			 puts "Titulo #{post.show_text}"
-			 (post.show_text.size+ 7).times {print "-"}
+			 (post.show_text.size + 7).times {print "-"}
 			 puts
 		end
 	end
