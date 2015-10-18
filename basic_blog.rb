@@ -20,4 +20,4 @@ my_blog.add_post(post4)
 my_blog.add_post(post5)
 my_blog.add_post(post6)
 
-my_blog.publish_front_page
+my_blog.publish_front_page_bonus
