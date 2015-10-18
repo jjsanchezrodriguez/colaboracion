@@ -29,25 +29,29 @@ class Blog
 
 	def publish_front_page_bonus
 		
-		total = @array_post.size / 4
+		page = 4
+
+		pos = @array_post.size / page
+		show_block_bonus(pos) 
+
 
 
 	end
 
-	def publish_front_page_bonus(pos) 
-		pos..(pos+4)each do 
-			if(@array_post[pos].show_sponsor == true)
-				puts "Post #{@array_post[pos].show_title}"
+	def show_block_bonus(pos,page=4) #page allow chose the number of post for page 
+		(pos..(pos+page)).each do |i|
+			if(@array_post[i].show_sponsor == true)
+				puts "Post #{@array_post[i].show_title}"
 			else
 				puts "************ Post #{@array_post[pos].show_title} *******************"	
 			end
 
-			(@array_post[pos].show_title.size + 6).times {print "*"}
+			(@array_post[i].show_title.size + 6).times {print "*"}
 			puts
 
 
-			puts "Titulo #{post.show_text}"
-			(@array_post[pos].show_text.size + 7).times {print "-"}
+			puts "Titulo #{@array_post[i].show_text}"
+			(@array_post[i].show_text.size + 7).times {print "-"}
 			puts
 		end
 	end
